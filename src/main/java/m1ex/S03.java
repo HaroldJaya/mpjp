@@ -8,8 +8,14 @@ public class S03 {
      * @return "positive", "negative", or "zero"
      */
     public static String checkSign(int value) {
-        // TODO
-        return "";
+    	if(value==0) {
+    		return "zero";
+    	}else if(value>0) {
+    		return "positive";
+    	}
+    	else {
+    		return "negative";
+    	}
     }
 
     /**
@@ -19,8 +25,7 @@ public class S03 {
      * @return "odd" or "even"
      */
     public static boolean isOdd(int value) {
-        // TODO
-        return false;
+        return 1==Math.abs(value%2);
     }
 
     /**
@@ -30,8 +35,28 @@ public class S03 {
      * @return "zero" for 0 ... "nine" for 9, or "other"
      */
     public static String asWord(int value) {
-        // TODO
-        return "";
+        switch (value) {
+        case 1:
+        	return "one";
+        case 2:
+        	return "two";
+        case 3:
+        	return "three";
+        case 4:
+        	return "four";
+        case 5:
+        	return "five";
+        case 6:
+        	return "six";
+        case 7:
+        	return "seven";
+        case 8:
+        	return "eight";
+        case 9:
+        	return "nine";
+       default:
+    	   return "other";
+        }
     }
 
     /**
@@ -43,7 +68,21 @@ public class S03 {
      * @return a letter in [A, F]
      */
     public static char vote(double percentile) {
-        // TODO
+//        if(percentile<0) {
+//        	//TODO
+//        }else if(percentile<=50) {
+//        	return 'F';
+//        }else if() {
+//        	
+//        }else if() {
+//        	
+//        }else if() {
+//        	
+//        }else if() {
+//        	
+//        }else if() {
+//        	
+//        }
         return 'F';
     }
 

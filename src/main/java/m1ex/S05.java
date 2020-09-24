@@ -1,5 +1,6 @@
 package m1ex;
 
+
 public class S05 {
 	/**
 	 * Reverse a string
@@ -8,8 +9,11 @@ public class S05 {
 	 * @return the input reversed
 	 */
 	public static String reverse(String s) {
-		// TODO
-		return "";
+		StringBuilder builder = new StringBuilder();
+		for (int i = s.length() - 1; i >= 0; i--) {
+			builder.append(s.charAt(i));
+		}
+		return builder.toString();
 	}
 
 	/**
@@ -19,8 +23,7 @@ public class S05 {
 	 * @return true if the parameter is a palindrome
 	 */
 	public static boolean isPalindrome(String s) {
-		// TODO
-		return false;
+		return s.equals(S05.reverse(s));
 	}
 
 	/**
@@ -30,10 +33,18 @@ public class S05 {
 	 * @return a string, same of input but without vowels
 	 */
 	public static String removeVowels(String s) {
-		// TODO
-
-	           
-		return "";
+		StringBuilder builder = new StringBuilder("");
+		char attuale;
+		for (int i = 0; i < s.length(); i++) {
+			attuale=s.charAt(i);
+			if (attuale == 'a' || attuale == 'e' || attuale == 'i' || attuale == 'o'
+					|| attuale == 'u' || attuale == 'A' || attuale == 'E' || attuale == 'I'
+					|| attuale == 'O' || attuale == 'U') {
+				continue;
+			}
+			builder.append(s.charAt(i));
+		}
+		return builder.toString();
 	}
 
 	/**
@@ -44,8 +55,9 @@ public class S05 {
 	 */
 	public static int bin2dec(String s) {
 		// [1][0][0][0][1]
-	    // 43_210
-	    // 2
+		// 43_210
+		// 2
+
 		return 0;
 	}
 
@@ -81,7 +93,12 @@ public class S05 {
 	 * @return the largest value
 	 */
 	public static int max(int[] data) {
-		// TODO
-		return Integer.MIN_VALUE;
+		int max=data[0];
+		for(int i=1; i<data.length;i++) {
+			if(data[i]>max) {
+				max=data[i];
+			}
+		}
+		return max;
 	}
 }
