@@ -20,12 +20,20 @@ class ExerciseTest {
     }
 
     @Test
+    void evens() {
+        Exercise ex = new Exercise();
+
+        List<Integer> expected = Arrays.asList(new Integer[] {2,4,8,8,10});
+        List<Integer> actual = ex.evens(new int[] {2,3,4, 23, 3, 23 ,8 ,8,10});
+        assertThat(actual, is(expected));
+    }
+    @Test
     void singlesCouple() {
         Exercise ex = new Exercise();
 
-        int[] data = { 23, 43, 23, 25 };
+        int[] data = { 23, 43, 23, 25, 25 };
 
-        List<Integer> expected = Arrays.asList(25, 43);
+        List<Integer> expected = Arrays.asList(23, 43, 25);
         List<Integer> actual = ex.singles(data);
         assertThat(actual, is(expected));
     }
